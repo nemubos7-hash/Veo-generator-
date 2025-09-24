@@ -113,9 +113,9 @@ st.markdown("""
 
 tabs = st.tabs(["📝 Text → Video", "🖼️ Image → Video"])  # noqa
 
-========================= Text -> Video =========================
+========================= Text → Video =========================
 
-with tabs[0]: st.subheader("Text -> Video (Batch per baris)") prompts_text = st.text_area("Masukkan prompt (tiap baris = 1 video)", height=180, placeholder="Contoh:\nA cute chubby orange cat taking a bubble bath, cinematic, soft bokeh.\nDrone shot of a rainforest waterfall at sunset, ultra-detailed, mist.") go_txt = st.button("Generate Video dari Teks", type="primary")
+with tabs[0]: st.subheader("Text → Video (Batch per baris)") prompts_text = st.text_area("Masukkan prompt (tiap baris = 1 video)", height=180, placeholder="Contoh:\nA cute chubby orange cat taking a bubble bath, cinematic, soft bokeh.\nDrone shot of a rainforest waterfall at sunset, ultra-detailed, mist.") go_txt = st.button("Generate Video dari Teks", type="primary")
 
 if go_txt:
     sdk = ensure_sdk()
@@ -149,9 +149,9 @@ if go_txt:
                 st.code(blob.decode(errors='ignore') if isinstance(blob, (bytes, bytearray)) else str(blob))
         st.divider()
 
-========================= Image -> Video =========================
+========================= Image → Video =========================
 
-with tabs[1]: st.subheader("Image -> Video (Opsional prompt, bisa multi-gambar)") prompt_img = st.text_area("Prompt pendamping (opsional)", height=120, placeholder="Contoh: A cinematic zoom-in with soft lighting and gentle camera sway.") uploads = st.file_uploader("Unggah 1 atau beberapa gambar", type=["jpg", "jpeg", "png", "webp"], accept_multiple_files=True) go_img = st.button("Generate Video dari Gambar")
+with tabs[1]: st.subheader("Image → Video (Opsional prompt, bisa multi-gambar)") prompt_img = st.text_area("Prompt pendamping (opsional)", height=120, placeholder="Contoh: A cinematic zoom-in with soft lighting and gentle camera sway.") uploads = st.file_uploader("Unggah 1 atau beberapa gambar", type=["jpg", "jpeg", "png", "webp"], accept_multiple_files=True) go_img = st.button("Generate Video dari Gambar")
 
 if go_img:
     sdk = ensure_sdk()
@@ -197,3 +197,4 @@ if go_img:
 
 st.caption( "Made with Streamlit • Jika terjadi error API/SDK, lihat log yang ditampilkan. " "Beberapa versi SDK memiliki perbedaan field (aspect_ratio vs aspectRatio, dll); app ini sudah mengirim beberapa variasi agar lebih kompatibel." )
 
+                                                             
