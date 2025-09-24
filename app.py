@@ -149,9 +149,9 @@ if go_txt:
                 st.code(blob.decode(errors='ignore') if isinstance(blob, (bytes, bytearray)) else str(blob))
         st.divider()
 
-========================= Image → Video =========================
+========================= Image -> Video =========================
 
-with tabs[1]: st.subheader("Image → Video (Opsional prompt, bisa multi-gambar)") prompt_img = st.text_area("Prompt pendamping (opsional)", height=120, placeholder="Contoh: A cinematic zoom-in with soft lighting and gentle camera sway.") uploads = st.file_uploader("Unggah 1 atau beberapa gambar", type=["jpg", "jpeg", "png", "webp"], accept_multiple_files=True) go_img = st.button("Generate Video dari Gambar")
+with tabs[1]: st.subheader("Image -> Video (Opsional prompt, bisa multi-gambar)") prompt_img = st.text_area("Prompt pendamping (opsional)", height=120, placeholder="Contoh: A cinematic zoom-in with soft lighting and gentle camera sway.") uploads = st.file_uploader("Unggah 1 atau beberapa gambar", type=["jpg", "jpeg", "png", "webp"], accept_multiple_files=True) go_img = st.button("Generate Video dari Gambar")
 
 if go_img:
     sdk = ensure_sdk()
