@@ -113,9 +113,9 @@ st.markdown("""
 
 tabs = st.tabs(["📝 Text → Video", "🖼️ Image → Video"])  # noqa
 
-========================= Text → Video =========================
+========================= Text -> Video =========================
 
-with tabs[0]: st.subheader("Text → Video (Batch per baris)") prompts_text = st.text_area("Masukkan prompt (tiap baris = 1 video)", height=180, placeholder="Contoh:\nA cute chubby orange cat taking a bubble bath, cinematic, soft bokeh.\nDrone shot of a rainforest waterfall at sunset, ultra-detailed, mist.") go_txt = st.button("Generate Video dari Teks", type="primary")
+with tabs[0]: st.subheader("Text -> Video (Batch per baris)") prompts_text = st.text_area("Masukkan prompt (tiap baris = 1 video)", height=180, placeholder="Contoh:\nA cute chubby orange cat taking a bubble bath, cinematic, soft bokeh.\nDrone shot of a rainforest waterfall at sunset, ultra-detailed, mist.") go_txt = st.button("Generate Video dari Teks", type="primary")
 
 if go_txt:
     sdk = ensure_sdk()
